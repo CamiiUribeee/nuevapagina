@@ -4,6 +4,11 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+
+import { Icon } from 'astro-icon/components';
+
+
 const items = [{
 	icon: '',
 	name: 'Opcion 1',
@@ -35,9 +40,37 @@ const items = [{
 		<title>{title}</title>
 	</head>
 	<body>
-		<header>
-			Acá va el encabezado 
+		<header class="container max-w-7xl mx-auto h-16 flex-items-center">
+			<div class="flex space-x-6">
+				<img  class="h-6"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/1024px-Microsoft_logo_%282012%29.svg.png" alt="">
+				<div  class="w-[2px] h-6 bg-slate-800"></div>
+				<img  class="h-6"  src="/xbox-logo.png">
+			</div>
+
+			<menu class="ml-8">
+				
+				<a href="#" class="hover:underline-offset-[6px] decoration-2">
+					game pass 
+				</a>
+				<Icon name="mdi:chevron-down" />
+
+			</menu>
+		
+		
 		</header>
+		<div class="relative">
+			<div class="absolute left-28   h-full flex items-center">
+				<h1 class="text-white text-5xl font-bold">FINAL FANTASY XIV</h1>
+			</div>
+			<video aria-label="Ambient video alt text" poster="https://assets.xboxservices.com/assets/45/5a/455a189b-0e7a-48bc-a966-9bf5ec8c08c2.jpg?n=896254_Page-Hero-1084_1920x720_01.jpg" muted="" autoplay="" loop="" alt="Video de FINAL FANTASY XIV Online con imágenes del juego y cinemáticas"><source class="heroImgDesktop" src="https://assets.xboxservices.com/assets/12/ff/12ff90f8-439f-42a6-892b-1bf80f02f027.mp4?n=FFXIV-Online_HP-Video_1920x720_04.mp4" type="video/mp4" srcset="https://assets.xboxservices.com/assets/12/ff/12ff90f8-439f-42a6-892b-1bf80f02f027.mp4?n=FFXIV-Online_HP-Video_1920x720_04.mp4"></video>
+		</div>
+
+
+
+
+
+
+
 		<div class="carrousel">
 			Slider de imagenes
 
@@ -103,7 +136,7 @@ const items = [{
 		transition: background 300ms ease-in-out;
 
 		&:hover {
-		background: purple; 
+		background: rgb(253, 252, 253); 
 	    }
 	}
 	nav {
@@ -112,7 +145,7 @@ const items = [{
 		display: flex;
     }
 	header{
-		background: purple;
+		background: rgb(252, 250, 252);
 		height: 36px;
 	}
 	.carrousel{
@@ -123,7 +156,7 @@ const items = [{
 
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
+		background: #fafbfc;
 		background-size: 224px;
 	}
 	code {
